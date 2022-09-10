@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <title>AluraGeek</title>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+      <div class="header__content wrapper">
+        <a href="./index.html" class="logo-container grid-va-center">
+          <img
+            src="./assets/aluraGeekLogo.png"
+            alt="Logo"
+            width="120"
+            height="40"
+            class="header__logo logo"
+          />
+        </a>
+
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__item">
+              <a href="#" class="header__link grid-va-center active">Home</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link grid-va-center">Products</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link grid-va-center">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__menu">
+          <form id="search-form" class="search-form" role="search">
+            <input
+              type="search"
+              name="search"
+              id="search"
+              class="search-form__input"
+              placeholder="Enter your search"
+              aria-label="Search products"
+            />
+
+            <button
+              class="btn-search search-form__submit header__icon"
+              aria-label="Submit search"
+            >
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            </button>
+          </form>
+
+          <button
+            class="btn-search btn-search--mobile header__icon"
+            aria-label="Search"
+            aria-controls="search-form"
+          >
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          </button>
+
+          <button class="btn-cart header__icon" aria-label="Cart">
+            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+          </button>
+
+          <a href="#" class="header__link login-link">
+            <i class="fa-solid fa-user" aria-hidden="true"></i>
+            Login
+          </a>
+
+          <button
+            class="header__hamburger"
+            aria-label="Navigation menu"
+            aria-expanded="false"
+          >
+            <span class="header__hamburger-line" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main"></main>
+
+    <script type="module" src="./src/index.js"></script>
+  </body>
+</html>
