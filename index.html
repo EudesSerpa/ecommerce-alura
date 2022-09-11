@@ -31,10 +31,15 @@
           />
         </a>
 
-        <nav class="header__nav">
+        <nav id="main-nav" class="header__nav">
           <ul class="header__nav-list">
             <li class="header__item">
-              <a href="#" class="header__link grid-va-center active">Home</a>
+              <a
+                href="#"
+                class="header__link grid-va-center active-page"
+                aria-current="page"
+                >Home</a
+              >
             </li>
             <li class="header__item">
               <a href="#" class="header__link grid-va-center">Products</a>
@@ -66,7 +71,8 @@
 
           <button
             class="btn-search btn-search--mobile header__icon"
-            aria-label="Search"
+            aria-label="Show search form"
+            aria-expanded="false"
             aria-controls="search-form"
           >
             <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
@@ -83,8 +89,9 @@
 
           <button
             class="header__hamburger"
-            aria-label="Navigation menu"
+            aria-label="Open navigation menu"
             aria-expanded="false"
+            aria-controls="main-nav"
           >
             <span class="header__hamburger-line" aria-hidden="true"></span>
           </button>

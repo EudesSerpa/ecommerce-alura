@@ -16,7 +16,7 @@
   gap: .75em;
 }
 
-.header__nav,
+.header__nav-list,
 .search-form {
   transform-origin: top;
   transform: scaleY(0);
@@ -27,7 +27,7 @@
   transition: transform .3s ease-in;
 }
 
-.header__nav.open,
+.header__nav-list.open,
 .search-form.open {
   transform: scale(1);
   opacity: 1;
@@ -36,12 +36,9 @@
   user-select: initial;
 }
 
-.header__nav {
+.header__nav-list {
   position: absolute;
   inset: 100% 0 auto;
-}
-
-.header__nav-list {
   display: flex;
   flex-direction: column;
   font-size: 1.2em;
@@ -59,19 +56,19 @@
   transition: color .2s ease-in, background-color .2s ease-in;
 }
 
-.header__link.active {
+.header__link.active-page {
   position: relative;
   color: var(--primary-color);
   transition-delay: .25s;
 }
 
-.header__link.active::after {
+.header__link.active-page::after {
   content: "";
   position: absolute;
   height: .15em;
   width: 100%;
   background-color: var(--primary-color);
-  animation: active 1s ease 1 forwards;
+  animation: active-page 1s ease 1 forwards;
 }
 
 .header__icon.active,
@@ -274,7 +271,7 @@
   }
 }
 
-@keyframes active {
+@keyframes active-page {
   from {
     top: 0;
   }
@@ -303,7 +300,6 @@
   }
 
   .search-form {
-    --size: 40px;
     position: initial;
     align-items: center;
     flex: 1;
@@ -324,24 +320,14 @@
   }
 
   .search-form__submit {
-    width: 30px;
-    height: 30px;
+    width: calc(var(--size) - 10px);
+    height: calc(var(--size) - 10px);
   }
 }
 
 @media screen and (min-width: 940px) {
   .header__hamburger {
     display: none;
-  }
-
-  .header__nav {
-    position: initial;
-    flex: 1;
-    transform: initial;
-    opacity: initial;
-    visibility: initial;
-    pointer-events: initial;
-    user-select: initial;
   }
 
   .header__content,
@@ -351,6 +337,8 @@
   }
 
   .header__nav-list {
+    position: initial;
+    flex: 1;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -359,6 +347,11 @@
     backdrop-filter: initial;
     -webkit-backdrop-filter: initial;
     letter-spacing: initial;
+    transform: initial;
+    opacity: initial;
+    visibility: initial;
+    pointer-events: initial;
+    user-select: initial;
     z-index: initial;
   }
 
