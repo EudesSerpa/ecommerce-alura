@@ -14,6 +14,9 @@
     />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/carousel.css" />
+    <link rel="stylesheet" href="./styles/products.css" />
+    <link rel="stylesheet" href="./styles/contact.css" />
     <title>AluraGeek</title>
   </head>
   <body>
@@ -99,7 +102,628 @@
       </div>
     </header>
 
-    <main id="main"></main>
+    <main id="main">
+      <section
+        class="hero carousel"
+        aria-label="Featured products"
+        aria-roledescription="carousel"
+        carousel-pagination="none"
+      >
+        <ul id="carousel__scroller" class="carousel__scroller">
+          <li class="carousel__slide">
+            <figure class="carousel__image-container">
+              <picture class="carousel__image-sources">
+                <source
+                  srcset="https://picsum.photos/1400/600.webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="https://picsum.photos/1000/500.webp"
+                  media="(min-width: 940px)"
+                />
+                <img
+                  class="carousel__image"
+                  src="https://picsum.photos/960/400.webp"
+                  alt="PS5 Blue Control"
+                  width="960"
+                  height="400"
+                />
+              </picture>
+
+              <figcaption class="carousel__image-description">
+                <h3 class="carousel__image-title">Product 1</h3>
+                <p class="carousel__image-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab,
+                  voluptatum? Eveniet nam delectus possimus consectetur,
+                  inventore repellendus vel mollitia esse quaerat vitae laborum
+                  itaque dicta ad aspernatur nisi tempore veniam.
+                </p>
+                <button class="carousel__image-cta">
+                  <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                  <span>Add to cart</span>
+                </button>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="carousel__slide">
+            <figure class="carousel__image-container">
+              <picture class="carousel__image-sources">
+                <source
+                  srcset="https://picsum.photos/1200/600.webp"
+                  media="(min-width: 1400px)"
+                />
+                <source
+                  srcset="https://picsum.photos/1000/500.webp"
+                  media="(min-width: 940px)"
+                />
+                <img
+                  class="carousel__image"
+                  src="https://picsum.photos/960/400.webp"
+                  alt="PS5 Blue Control"
+                  width="960"
+                  height="400"
+                />
+              </picture>
+
+              <figcaption class="carousel__image-description">
+                <h3 class="carousel__image-title">Product 1</h3>
+                <p class="carousel__image-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab,
+                  voluptatum? Eveniet nam delectus possimus consectetur,
+                  inventore repellendus vel mollitia esse quaerat vitae laborum
+                  itaque dicta ad aspernatur nisi tempore veniam.
+                </p>
+                <button class="carousel__image-cta">
+                  <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                  <span>Add to cart</span>
+                </button>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="carousel__slide">
+            <figure class="carousel__image-container">
+              <picture class="carousel__image-sources">
+                <source
+                  srcset="https://picsum.photos/1200/600.webp"
+                  media="(min-width: 1400px)"
+                />
+                <source
+                  srcset="https://picsum.photos/1000/500.webp"
+                  media="(min-width: 940px)"
+                />
+                <img
+                  class="carousel__image"
+                  src="https://picsum.photos/960/400.webp"
+                  alt="PS5 Blue Control"
+                  width="960"
+                  height="400"
+                />
+              </picture>
+
+              <figcaption class="carousel__image-description">
+                <h3 class="carousel__image-title">Product 1</h3>
+                <p class="carousel__image-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab,
+                  voluptatum? Eveniet nam delectus possimus consectetur,
+                  inventore repellendus vel mollitia esse quaerat vitae laborum
+                  itaque dicta ad aspernatur nisi tempore veniam.
+                </p>
+                <button class="carousel__image-cta">
+                  <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                  <span>Add to cart</span>
+                </button>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+      </section>
+
+      <section class="products wrapper">
+        <header class="products__header">
+          <h2 class="products__title section__subtitle">Products #1</h2>
+
+          <a href="#" class="products__see-all">
+            <span>See products</span>
+            <i
+              aria-hidden="true"
+              class="see-all__icon fa-solid fa-arrow-right"
+            ></i>
+          </a>
+        </header>
+
+        <ul class="products__grid">
+          <li class="product__item">
+            <a href="#" class="product" aria-label="See product">
+              <figure class="product-container">
+                <div class="product__image-container">
+                  <img
+                    class="product__image"
+                    src="https://picsum.photos/320/360.webp"
+                    alt="Product XYZ"
+                    width="164"
+                    height="174"
+                  />
+                </div>
+
+                <figcaption class="product__description">
+                  <h4 class="product__title">Producto XYZ</h4>
+                  <p class="product__text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
+                    repellendus hic dolore deleniti veniam est, doloremque
+                    laborum natus minima vitae ut corporis incidunt, quas
+                    repellat.
+                  </p>
+
+                  <p class="product__price">$ 333</p>
+                  <button class="product__cta">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                    <span>Add to cart</span>
+                  </button>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="product__item">
+            <a href="#" class="product" aria-label="See product">
+              <figure class="product-container">
+                <div class="product__image-container">
+                  <img
+                    class="product__image"
+                    src="https://picsum.photos/320/360.webp"
+                    alt="Product XYZ"
+                    width="164"
+                    height="174"
+                  />
+                </div>
+
+                <figcaption class="product__description">
+                  <h4 class="product__title">Producto XYZ</h4>
+                  <p class="product__text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
+                    repellendus hic dolore deleniti veniam est, doloremque
+                    laborum natus minima vitae ut corporis incidunt, quas
+                    repellat.
+                  </p>
+
+                  <p class="product__price">$ 333</p>
+                  <button class="product__cta">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                    <span>Add to cart</span>
+                  </button>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="product__item">
+            <a href="#" class="product" aria-label="See product">
+              <figure class="product-container">
+                <div class="product__image-container">
+                  <img
+                    class="product__image"
+                    src="https://picsum.photos/320/360.webp"
+                    alt="Product XYZ"
+                    width="164"
+                    height="174"
+                  />
+                </div>
+
+                <figcaption class="product__description">
+                  <h4 class="product__title">Producto XYZ</h4>
+                  <p class="product__text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
+                    repellendus hic dolore deleniti veniam est, doloremque
+                    laborum natus minima vitae ut corporis incidunt, quas
+                    repellat.
+                  </p>
+
+                  <p class="product__price">$ 333</p>
+                  <button class="product__cta">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                    <span>Add to cart</span>
+                  </button>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="product__item">
+            <a href="#" class="product" aria-label="See product">
+              <figure class="product-container">
+                <div class="product__image-container">
+                  <img
+                    class="product__image"
+                    src="https://picsum.photos/320/360.webp"
+                    alt="Product XYZ"
+                    width="164"
+                    height="174"
+                  />
+                </div>
+
+                <figcaption class="product__description">
+                  <h4 class="product__title">Producto XYZ</h4>
+                  <p class="product__text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
+                    repellendus hic dolore deleniti veniam est, doloremque
+                    laborum natus minima vitae ut corporis incidunt, quas
+                    repellat.
+                  </p>
+
+                  <p class="product__price">$ 333</p>
+                  <button class="product__cta">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                    <span>Add to cart</span>
+                  </button>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="products wrapper">
+        <header class="products__header">
+          <h2 class="products__title section__subtitle">Products #2</h2>
+
+          <a href="#" class="products__see-all">
+            <span>See products</span>
+            <i
+              aria-hidden="true"
+              class="see-all__icon fa-solid fa-arrow-right"
+            ></i>
+          </a>
+        </header>
+
+        <ul class="products__grid">
+          <li class="product__item">
+            <a href="#" class="product" aria-label="See product">
+              <figure class="product-container">
+                <div class="product__image-container">
+                  <img
+                    class="product__image"
+                    src="https://picsum.photos/320/360.webp"
+                    alt="Product XYZ"
+                    width="164"
+                    height="174"
+                  />
+                </div>
+
+                <figcaption class="product__description">
+                  <h4 class="product__title">Producto XYZ</h4>
+                  <p class="product__text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
+                    repellendus hic dolore deleniti veniam est, doloremque
+                    laborum natus minima vitae ut corporis incidunt, quas
+                    repellat.
+                  </p>
+
+                  <p class="product__price">$ 333</p>
+                  <button class="product__cta">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                    <span>Add to cart</span>
+                  </button>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="product__item">
+            <a href="#" class="product" aria-label="See product">
+              <figure class="product-container">
+                <div class="product__image-container">
+                  <img
+                    class="product__image"
+                    src="https://picsum.photos/320/360.webp"
+                    alt="Product XYZ"
+                    width="164"
+                    height="174"
+                  />
+                </div>
+
+                <figcaption class="product__description">
+                  <h4 class="product__title">Producto XYZ</h4>
+                  <p class="product__text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
+                    repellendus hic dolore deleniti veniam est, doloremque
+                    laborum natus minima vitae ut corporis incidunt, quas
+                    repellat.
+                  </p>
+
+                  <p class="product__price">$ 333</p>
+                  <button class="product__cta">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                    <span>Add to cart</span>
+                  </button>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="product__item">
+            <a href="#" class="product" aria-label="See product">
+              <figure class="product-container">
+                <div class="product__image-container">
+                  <img
+                    class="product__image"
+                    src="https://picsum.photos/320/360.webp"
+                    alt="Product XYZ"
+                    width="164"
+                    height="174"
+                  />
+                </div>
+
+                <figcaption class="product__description">
+                  <h4 class="product__title">Producto XYZ</h4>
+                  <p class="product__text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
+                    repellendus hic dolore deleniti veniam est, doloremque
+                    laborum natus minima vitae ut corporis incidunt, quas
+                    repellat.
+                  </p>
+
+                  <p class="product__price">$ 333</p>
+                  <button class="product__cta">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                    <span>Add to cart</span>
+                  </button>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="product__item">
+            <a href="#" class="product" aria-label="See product">
+              <figure class="product-container">
+                <div class="product__image-container">
+                  <img
+                    class="product__image"
+                    src="https://picsum.photos/320/360.webp"
+                    alt="Product XYZ"
+                    width="164"
+                    height="174"
+                  />
+                </div>
+
+                <figcaption class="product__description">
+                  <h4 class="product__title">Producto XYZ</h4>
+                  <p class="product__text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
+                    repellendus hic dolore deleniti veniam est, doloremque
+                    laborum natus minima vitae ut corporis incidunt, quas
+                    repellat.
+                  </p>
+
+                  <p class="product__price">$ 333</p>
+                  <button class="product__cta">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                    <span>Add to cart</span>
+                  </button>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="products wrapper">
+        <header class="products__header">
+          <h2 class="products__title section__subtitle">Products #3</h2>
+
+          <a href="#" class="products__see-all">
+            <span>See products</span>
+            <i
+              aria-hidden="true"
+              class="see-all__icon fa-solid fa-arrow-right"
+            ></i>
+          </a>
+        </header>
+
+        <ul class="products__grid">
+          <li class="product__item">
+            <a href="#" class="product" aria-label="See product">
+              <figure class="product-container">
+                <div class="product__image-container">
+                  <img
+                    class="product__image"
+                    src="https://picsum.photos/320/360.webp"
+                    alt="Product XYZ"
+                    width="164"
+                    height="174"
+                  />
+                </div>
+
+                <figcaption class="product__description">
+                  <h4 class="product__title">Producto XYZ</h4>
+                  <p class="product__text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
+                    repellendus hic dolore deleniti veniam est, doloremque
+                    laborum natus minima vitae ut corporis incidunt, quas
+                    repellat.
+                  </p>
+
+                  <p class="product__price">$ 333</p>
+                  <button class="product__cta">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                    <span>Add to cart</span>
+                  </button>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="product__item">
+            <a href="#" class="product" aria-label="See product">
+              <figure class="product-container">
+                <div class="product__image-container">
+                  <img
+                    class="product__image"
+                    src="https://picsum.photos/320/360.webp"
+                    alt="Product XYZ"
+                    width="164"
+                    height="174"
+                  />
+                </div>
+
+                <figcaption class="product__description">
+                  <h4 class="product__title">Producto XYZ</h4>
+                  <p class="product__text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
+                    repellendus hic dolore deleniti veniam est, doloremque
+                    laborum natus minima vitae ut corporis incidunt, quas
+                    repellat.
+                  </p>
+
+                  <p class="product__price">$ 333</p>
+                  <button class="product__cta">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                    <span>Add to cart</span>
+                  </button>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="product__item">
+            <a href="#" class="product" aria-label="See product">
+              <figure class="product-container">
+                <div class="product__image-container">
+                  <img
+                    class="product__image"
+                    src="https://picsum.photos/320/360.webp"
+                    alt="Product XYZ"
+                    width="164"
+                    height="174"
+                  />
+                </div>
+
+                <figcaption class="product__description">
+                  <h4 class="product__title">Producto XYZ</h4>
+                  <p class="product__text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
+                    repellendus hic dolore deleniti veniam est, doloremque
+                    laborum natus minima vitae ut corporis incidunt, quas
+                    repellat.
+                  </p>
+
+                  <p class="product__price">$ 333</p>
+                  <button class="product__cta">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                    <span>Add to cart</span>
+                  </button>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="product__item">
+            <a href="#" class="product" aria-label="See product">
+              <figure class="product-container">
+                <div class="product__image-container">
+                  <img
+                    class="product__image"
+                    src="https://picsum.photos/320/360.webp"
+                    alt="Product XYZ"
+                    width="164"
+                    height="174"
+                  />
+                </div>
+
+                <figcaption class="product__description">
+                  <h4 class="product__title">Producto XYZ</h4>
+                  <p class="product__text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
+                    repellendus hic dolore deleniti veniam est, doloremque
+                    laborum natus minima vitae ut corporis incidunt, quas
+                    repellat.
+                  </p>
+
+                  <p class="product__price">$ 333</p>
+                  <button class="product__cta">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                    <span>Add to cart</span>
+                  </button>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="contact wrapper">
+        <header class="contact__header">
+          <h2 class="section__title">Contact us</h2>
+        </header>
+
+        <p class="contact__text">
+          If you have any question, you can contact us. We will support you in
+          all.
+        </p>
+
+        <div class="contact__content">
+          <div class="contact__image"></div>
+
+          <form class="contact__form form">
+            <div class="form__item">
+              <label class="form__label" for="name">Name</label>
+
+              <p id="name-error" class="form__inline-error" aria-live="off"></p>
+
+              <div class="form__input-container">
+                <input
+                  id="name"
+                  name="name"
+                  class="form__input"
+                  autocomplete="name"
+                  required
+                  aria-describedby="name-error"
+                />
+
+                <div class="form__icon-container">
+                  <span class="form__icon form__icon--valid">
+                    <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
+                  </span>
+                  <span class="form__icon form__icon--invalid">
+                    <i class="fa-solid fa-circle-xmark" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__item">
+              <label class="form__label" for="message">Message</label>
+              <p id="message-hint" class="form__hint">
+                Hint: with at least 10 characters. Example:
+                <span class="form__hint--example"
+                  >Hi! I'd like know more about...</span
+                >.
+              </p>
+
+              <p
+                id="message-error"
+                class="form__inline-error"
+                aria-live="off"
+              ></p>
+
+              <div class="form__input-container">
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form__input form__textarea"
+                  rows="5"
+                  cols="50"
+                  required
+                  minlength="10"
+                  aria-describedby="message-hint message-error"
+                ></textarea>
+
+                <div class="form__icon-container">
+                  <span class="form__icon form__icon--valid">
+                    <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
+                  </span>
+                  <span class="form__icon form__icon--invalid">
+                    <i class="fa-solid fa-circle-xmark" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <button class="form__button">Send message</button>
+          </form>
+        </div>
+      </section>
+    </main>
 
     <script type="module" src="./src/index.js"></script>
   </body>

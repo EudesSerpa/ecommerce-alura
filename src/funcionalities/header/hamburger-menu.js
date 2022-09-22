@@ -46,7 +46,6 @@ const cleanEventsToCloseMenu = () => {
  *  Handler for the menu button's click event:  Open and close the menu
  */
 export const toggleMenu = () => {
-  console.log(btnHamburger.getAttribute("aria-expanded"));
   const isOpen = btnHamburger.getAttribute("aria-expanded") === "false";
   btnHamburger.setAttribute("aria-expanded", isOpen);
 

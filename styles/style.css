@@ -119,6 +119,35 @@ input {
   height: 100%;
 }
 
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.section__title {
+  margin-block: .5em .4em;
+  font-size: var(--font-large-size);
+  text-align: center;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+.section__subtitle {
+  margin-block: .7em .3em;
+  font-size: var(--font-medium-size);
+}
+
 /* Skip link */
 .skip-link {
   display: block;

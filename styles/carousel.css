@@ -1,0 +1,247 @@
+/* Carousel */
+.carousel {
+  --carousel-item-size: 100%;
+  --carousel-pagination: 1.5rem;
+  --carousel-gutters: max(4rem, calc((100% - var(--carousel-item-size)) / 2));
+  --carousel-scrollbar-gutter: 1.75rem;
+
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--carousel-gutters) 1fr var(--carousel-gutters);
+  grid-template-rows: 1fr var(--carousel-pagination);
+}
+
+.carousel button {
+  border: none;
+  cursor: pointer;
+}
+
+/* No pagination */
+.carousel[carousel-pagination=none] {
+  grid-template-rows: 1fr;
+}
+
+.carousel[carousel-pagination=none] .carousel__pagination {
+  display: none;
+}
+
+.carousel__animation-control {
+  grid-row: 1;
+  grid-column-start: 1;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 1.7rem;
+  margin: .7rem .8rem;
+  color: #fff;
+  background-color: #000;
+  border-radius: .3rem;
+  z-index: 1;
+}
+
+.carousel__scroller {
+  grid-row: 1;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 1em;
+  padding-block: 0 .5rem;
+  scroll-padding-inline: var(--carousel-gutters);
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  /* No scrollbar */
+  scrollbar-width: none;
+}
+
+.carousel__scroller::-webkit-scrollbar {
+  display: none;
+}
+
+/* -- Slide */
+.carousel__slide {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+.carousel__image-container {
+  display: grid;
+}
+
+.carousel__image-description,
+.carousel__image-sources {
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+}
+
+.carousel__image {
+  object-fit: cover;
+  width: 100%;
+  height: 60vh;
+  background: var(--primary-color);
+}
+
+.carousel__image-description {
+  place-self: center;
+  display: grid;
+  place-items: center;
+  gap: .8rem;
+  max-width: 80%;
+  padding: 1rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .35);
+  border-radius: .3rem;
+  backdrop-filter: blur(3px);
+}
+
+.carousel__image-title {
+  font-size: 2rem;
+}
+
+.carousel__image-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 60ch;
+  line-height: 1.2;
+  letter-spacing: .01rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.carousel__image-cta {
+  place-self: end;
+  padding: .7rem 1rem;
+  margin-top: .5rem;
+  color: var(--on-primary);
+  background-color: var(--primary-color);
+  border-radius: 1.3rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+/* -- Controls */
+.carousel__controls {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: var(--carousel-gutters);
+  display: contents;
+}
+
+.carousel__control-container {
+  grid-row: 1;
+  place-self: center;
+  z-index: 1;
+}
+
+.carousel__control {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  aspect-ratio: 1;
+  margin-block-end: var(--carousel-scrollbar-gutter);
+  color: #f1f1f1;
+  background: rgba(0, 0, 0, .35);
+  border-radius: 50%;
+  transition: opacity .5s ease .5s, background-color .3s ease-in, color .3s ease-in;
+}
+
+.carousel__control:not([disabled="true"]):active {
+  transform: scale(.95);
+}
+
+.carousel__control--previous {
+  grid-column: 1;
+}
+
+.carousel__control--next {
+  grid-column: 3;
+}
+
+.carousel__control[disabled] {
+  cursor: not-allowed;
+  transition-delay: 0s;
+}
+
+.carousel__control-icon {
+  width: 32px;
+  aspect-ratio: 1;
+  transform-origin: center;
+  transition: transform .3s ease;
+}
+
+.carousel__control:not([disabled]):is(:hover, :focus) {
+  color: var(--on-primary);
+  background-color: var(--primary-color);
+}
+
+.carousel__control[disabled] .carousel__control-icon {
+  opacity: .3;
+}
+
+.btn--previous:not([disabled]):is(:hover, :focus) .carousel__control-icon {
+  transform: translateX(-2px);
+}
+
+.btn--next:not([disabled]):is(:hover, :focus) .carousel__control-icon {
+  transform: translateX(2px);
+}
+
+/* -- Pagination */
+.carousel__pagination {
+  grid-column: 1/-1;
+  place-self: start center;
+  display: grid;
+  grid-auto-flow: column;
+  gap: .5rem;
+  max-width: 100%;
+  padding-inline: 1.25rem;
+  padding-block: .5rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.carousel__pagination::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel__pagination-control {
+  width: 1.4rem;
+  aspect-ratio: 1;
+  color: var(--on-secondary);
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  transform: scale(.75);
+  border: 1px solid transparent;
+}
+
+.carousel__pagination-control[aria-selected="true"] {
+  transform: scale(1);
+  color: var(--on-primary);
+  background: var(--primary-color);
+}
+
+@keyframes carousel__control-keypress {
+  0% {
+    outline-offset: 5px;
+  }
+
+  50% {
+    outline-offset: 0;
+  }
+}
+
+@keyframes carousel-scrollstart {
+  from {
+    scroll-snap-align: center;
+  }
+
+  to {
+    scroll-snap-align: unset;
+  }
+}
