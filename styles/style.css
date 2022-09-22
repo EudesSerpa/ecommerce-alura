@@ -144,7 +144,6 @@ input {
 }
 
 .section__subtitle {
-  margin-block: .7em .3em;
   font-size: var(--font-medium-size);
 }
 

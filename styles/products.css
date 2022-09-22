@@ -1,7 +1,3 @@
-.products {
-  padding-bottom: 1rem;
-}
-
 .products__header {
   display: flex;
   flex-wrap: wrap;
@@ -31,7 +27,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   place-items: center;
-  gap: .7rem;
+  gap: 1rem;
 }
 
 .product {

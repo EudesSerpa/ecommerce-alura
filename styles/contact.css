@@ -21,9 +21,8 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 1em;
-  width: 100%;
-  max-width: 400px;
-  height: 360px;
+  width: min(400px, 100%);
+  min-height: 360px;
   padding: 1em 1.5em;
   margin: 0 auto;
   border-radius: var(--border-radius);

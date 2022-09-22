@@ -1,27 +1,3 @@
-/*
-import { $ } from "../../utils/getElement.js";
-
-const carousel = $(".carousel");
-const btnPrevSlide = $(".carousel__control--previous");
-const btnNextSlide = $(".carousel__control--next");
-
-// Manage the slides
-btnPrevSlide("click", btnPrevSlide);
-btnNextSlide("click", btnNextSlide);
-
-// Improve readable
-carousel.addEventListener("mouseenter", suspendAnimation);
-carousel.addEventListener("mouseleave", startAnimation);
-
-carousel.addEventListener("focusin", ({ target }) => {
-  if (!target.classList.contains("slide")) suspendAnimation();
-});
-
-carousel.addEventListener("focusout", ({ target }) => {
-  if (!target.classList.contains("slide")) startAnimation();
-});
-*/
-
 import { scrollend } from "https://cdn.jsdelivr.net/gh/argyleink/scrollyfills@latest/dist/scrollyfills.modern.js";
 
 export default class Carousel {
@@ -71,21 +47,6 @@ export default class Carousel {
         threshold: 0.6,
       }
     );
-
-    // Clean removed carousel
-    this.mutation_observer = new MutationObserver((mutationList) => {
-      mutationList
-        .filter((node) => node.removedNodes.length > 0)
-        .forEach((mutation) => {
-          [...mutation.removedNodes]
-            .filter(
-              (node) => node.querySelector(".carousel") === this.elements.root
-            )
-            .forEach((_removedElement) => {
-              this.#unlisten();
-            });
-        });
-    });
   }
 
   #createPagination() {
@@ -299,12 +260,6 @@ export default class Carousel {
       this.carousel_observer.observe(item);
     }
 
-    // watch document for removal of this carousel node
-    this.mutation_observer.observe(document, {
-      childList: true,
-      subtree: true,
-    });
-
     // scrollend listener for sync
     this.elements.scroller.addEventListener(
       "scrollend",
@@ -329,8 +284,6 @@ export default class Carousel {
     for (const item of this.elements.slides) {
       this.carousel_observer.unobserve(item);
     }
-
-    this.mutation_observer.disconnect();
 
     this.elements.scroller.removeEventListener("scrollend", this.#synchronize);
     this.elements.next.removeEventListener("click", this.goNext);
