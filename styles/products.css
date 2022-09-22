@@ -1,0 +1,117 @@
+.products {
+  padding-bottom: 1rem;
+}
+
+.products__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.products__see-all {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+.see-all__icon {
+  font-weight: 700;
+  transition: transform .4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.products__see-all:where(:hover, :focus)>.see-all__icon {
+  transform: translateX(.3rem);
+}
+
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  place-items: center;
+  gap: .7rem;
+}
+
+.product {
+  display: inline-block;
+  background-color: var(--surface);
+  box-shadow: .1rem .3rem .4rem rgb(0 0 0 / .3);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+
+}
+
+:is(.product__item:hover, .product:focus) .product__image {
+  transform: scale(1.1);
+}
+
+.product__image-container {
+  height: 180px;
+  overflow: hidden;
+}
+
+.product__image {
+  object-fit: cover;
+  width: 100%;
+  transition: transform .4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.product__description {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: .7rem 1rem 1rem;
+  border-top: .4rem solid var(--primary-color);
+}
+
+.product__title {
+  font-size: 1.25rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.product__text {
+  display: -webkit-box;
+  max-width: 40ch;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  font-size: .9rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.product__price {
+  margin: .3rem auto .5rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.product__cta {
+  place-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: .7rem 1rem;
+  color: var(--on-primary);
+  background-color: var(--primary-color);
+  box-shadow: .15rem .15rem .3rem rgb(0 0 0 / .2);
+  border-radius: 1.3rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: capitalize;
+  transition: all .3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.product__cta:where(:hover, :focus) {
+  color: var(--primary-color);
+  background-color: var(--on-primary);
+  box-shadow: 0 .1em .3em var(--shadow);
+}
+
+.product__cta:active {
+  box-shadow: inset 0 .3em .3em var(--shadow);
+}
