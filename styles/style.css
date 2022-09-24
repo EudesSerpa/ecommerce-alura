@@ -49,9 +49,6 @@
   /* Font */
   --font-primary: 'Montserrat', sans-serif;
 
-  --title-section: 3.6em;
-  --subtitle-section: 2.8em;
-
   --font-large-size: 2.2em;
   --font-medium-size: 1.8em;
   --font-size: 1.6em;
@@ -144,7 +141,7 @@ input {
 }
 
 .section__subtitle {
-  font-size: var(--font-medium-size);
+  font-size: var(--font-size);
 }
 
 /* Skip link */

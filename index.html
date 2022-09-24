@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./styles/carousel.css" />
     <link rel="stylesheet" href="./styles/products.css" />
     <link rel="stylesheet" href="./styles/contact.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
     <title>AluraGeek</title>
   </head>
   <body>
@@ -724,9 +725,86 @@
           </form>
         </div>
       </section>
-
-      <footer class="footer"></footer>
     </main>
+
+    <footer class="footer wrapper">
+      <a href="./index.html" class="logo-container grid-va-center">
+        <img
+          src="./assets/aluraGeekLogo.png"
+          alt="Logo"
+          width="120"
+          height="40"
+          class="logo"
+        />
+      </a>
+
+      <div class="footer__body">
+        <section class="footer__section footer__about-us">
+          <h4 class="footer__section-title">About us</h4>
+
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Fidelity program</a></li>
+            <li><a href="#" class="footer__link">Privacity politic</a></li>
+            <li><a href="#" class="footer__link">Terms and Conditions</a></li>
+          </ul>
+        </section>
+
+        <section class="footer__section footer__site-map">
+          <h4 class="footer__section-title">Site Map</h4>
+
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Home</a></li>
+            <li><a href="#" class="footer__link">Products</a></li>
+            <li><a href="#" class="footer__link">Contact</a></li>
+            <li><a href="#" class="footer__link">Login</a></li>
+          </ul>
+        </section>
+
+        <section class="footer__section footer__social-media">
+          <h4 class="footer__section-title">Follow us</h4>
+
+          <ul class="footer__list footer__social-media-list">
+            <li>
+              <a
+                href="#"
+                class="footer__link facebook"
+                aria-label="Facebook"
+                title="Facebook"
+              >
+                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="footer__link instagram"
+                aria-label="Instagram"
+                title="Instagram"
+              >
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="footer__link twitter"
+                aria-label="Twitter"
+                title="Twitter"
+              >
+                <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <p class="footer__author">
+        Made with
+        <i class="fas fa-heart heart" aria-label="love"></i>
+        and moving the hands by
+        <a href="#" class="footer__link author-name">Eudes&nbsp;Serpa</a>
+      </p>
+    </footer>
 
     <script type="module" src="./src/index.js"></script>
     <script type="module" src="./src/form-validation.js"></script>

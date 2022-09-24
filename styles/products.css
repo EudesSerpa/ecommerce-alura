@@ -1,3 +1,7 @@
+.products {
+  padding-block: 1rem;
+}
+
 .products__header {
   display: flex;
   flex-wrap: wrap;
@@ -36,7 +40,6 @@
   box-shadow: .1rem .3rem .4rem rgb(0 0 0 / .3);
   border-radius: var(--border-radius);
   overflow: hidden;
-
 }
 
 :is(.product__item:hover, .product:focus) .product__image {
