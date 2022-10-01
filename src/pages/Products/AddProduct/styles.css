@@ -1,0 +1,17 @@
+.create-product {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  padding-block: 3rem;
+}
+
+.form {
+  width: 400px;
+  margin: 0;
+}
+
+.product-preview {
+  width: 320px;
+}

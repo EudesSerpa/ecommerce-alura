@@ -1,0 +1,26 @@
+.login {
+  padding-block: 2rem;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1em;
+  width: min(500px, 100%);
+  min-height: 360px;
+  padding: 1em 1.5em;
+  margin: 0 auto;
+}
+
+.login__form .form__input {
+  padding-block: .8rem;
+}
+
+.login__form .form__hint {
+  font-size: .8rem;
+}
+
+.login__form .form__hint--example {
+  background-color: var(--surface);
+}

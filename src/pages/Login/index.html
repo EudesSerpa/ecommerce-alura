@@ -12,13 +12,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/header.css" />
-    <link rel="stylesheet" href="./styles/carousel.css" />
-    <link rel="stylesheet" href="./styles/products.css" />
-    <link rel="stylesheet" href="./styles/contact.css" />
-    <link rel="stylesheet" href="./styles/footer.css" />
-    <title>AluraGeek</title>
+    <link rel="stylesheet" href="../../../styles/style.css" />
+    <link rel="stylesheet" href="../../../styles/header.css" />
+    <link rel="stylesheet" href="../../../styles/contact.css" />
+    <link rel="stylesheet" href="../../../styles/footer.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>AluraGeek | Login</title>
   </head>
   <body>
     <wc-toast></wc-toast>
@@ -26,9 +25,9 @@
 
     <header class="header">
       <div class="header__content wrapper">
-        <a href="./index.html" class="logo-container grid-va-center">
+        <a href="../../../index.html" class="logo-container grid-va-center">
           <img
-            src="./assets/aluraGeekLogo.png"
+            src="../../../assets/aluraGeekLogo.png"
             alt="Logo"
             width="120"
             height="40"
@@ -40,21 +39,28 @@
           <ul class="header__nav-list">
             <li class="header__item">
               <a
-                href="./index.html"
-                class="header__link grid-va-center active-page"
+                href="../../../index.html"
+                class="header__link grid-va-center"
                 aria-current="page"
                 >Home</a
               >
             </li>
             <li class="header__item">
               <a
-                href="./src/pages/Products/index.html"
+                href="../Products/index.html"
                 class="header__link grid-va-center"
                 >Products</a
               >
             </li>
             <li class="header__item">
               <a href="#contact" class="header__link grid-va-center">Contact</a>
+            </li>
+            <li class="header__item">
+              <a
+                href="./index.html"
+                class="header__link grid-va-center active-page"
+                >Login</a
+              >
             </li>
           </ul>
         </nav>
@@ -91,14 +97,6 @@
             <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
           </button>
 
-          <a
-            href="./src/pages/Login/index.html"
-            class="header__link login-link"
-          >
-            <i class="fa-solid fa-user" aria-hidden="true"></i>
-            Login
-          </a>
-
           <button
             class="header__hamburger"
             aria-label="Open navigation menu"
@@ -112,167 +110,81 @@
     </header>
 
     <main id="main">
-      <section
-        class="hero carousel"
-        aria-label="Featured products"
-        aria-roledescription="carousel"
-        carousel-pagination="none"
-      >
-        <ul id="carousel__scroller" class="carousel__scroller">
-          <li class="carousel__slide">
-            <figure class="carousel__image-container">
-              <picture class="carousel__image-sources">
-                <source
-                  srcset="https://picsum.photos/1400/600.webp"
-                  media="(min-width: 1200px)"
-                />
-                <source
-                  srcset="https://picsum.photos/1000/500.webp"
-                  media="(min-width: 940px)"
-                />
-                <img
-                  class="carousel__image"
-                  src="https://picsum.photos/960/400.webp"
-                  alt="PS5 Blue Control"
-                  width="960"
-                  height="400"
-                />
-              </picture>
-
-              <figcaption class="carousel__image-description">
-                <h3 class="carousel__image-title">Product 1</h3>
-                <p class="carousel__image-text">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab,
-                  voluptatum? Eveniet nam delectus possimus consectetur,
-                  inventore repellendus vel mollitia esse quaerat vitae laborum
-                  itaque dicta ad aspernatur nisi tempore veniam.
-                </p>
-                <button class="carousel__image-cta">
-                  <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
-                  <span>Add to cart</span>
-                </button>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="carousel__slide">
-            <figure class="carousel__image-container">
-              <picture class="carousel__image-sources">
-                <source
-                  srcset="https://picsum.photos/1200/600.webp"
-                  media="(min-width: 1400px)"
-                />
-                <source
-                  srcset="https://picsum.photos/1000/500.webp"
-                  media="(min-width: 940px)"
-                />
-                <img
-                  class="carousel__image"
-                  src="https://picsum.photos/960/400.webp"
-                  alt="PS5 Blue Control"
-                  width="960"
-                  height="400"
-                />
-              </picture>
-
-              <figcaption class="carousel__image-description">
-                <h3 class="carousel__image-title">Product 2</h3>
-                <p class="carousel__image-text">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab,
-                  voluptatum? Eveniet nam delectus possimus consectetur,
-                  inventore repellendus vel mollitia esse quaerat vitae laborum
-                  itaque dicta ad aspernatur nisi tempore veniam.
-                </p>
-                <button class="carousel__image-cta">
-                  <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
-                  <span>Add to cart</span>
-                </button>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="carousel__slide">
-            <figure class="carousel__image-container">
-              <picture class="carousel__image-sources">
-                <source
-                  srcset="https://picsum.photos/1200/600.webp"
-                  media="(min-width: 1400px)"
-                />
-                <source
-                  srcset="https://picsum.photos/1000/500.webp"
-                  media="(min-width: 940px)"
-                />
-                <img
-                  class="carousel__image"
-                  src="https://picsum.photos/960/400.webp"
-                  alt="PS5 Blue Control"
-                  width="960"
-                  height="400"
-                />
-              </picture>
-
-              <figcaption class="carousel__image-description">
-                <h3 class="carousel__image-title">Product 3</h3>
-                <p class="carousel__image-text">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab,
-                  voluptatum? Eveniet nam delectus possimus consectetur,
-                  inventore repellendus vel mollitia esse quaerat vitae laborum
-                  itaque dicta ad aspernatur nisi tempore veniam.
-                </p>
-                <button class="carousel__image-cta">
-                  <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
-                  <span>Add to cart</span>
-                </button>
-              </figcaption>
-            </figure>
-          </li>
-        </ul>
-      </section>
-
-      <section class="products wrapper">
-        <header class="products__header">
-          <h2 class="products__title section__subtitle">Offers</h2>
-
-          <a href="#" class="products__see-all">
-            <span>See products</span>
-            <i
-              aria-hidden="true"
-              class="see-all__icon fa-solid fa-arrow-right"
-            ></i>
-          </a>
+      <section class="login wrapper full-width">
+        <header class="login__header">
+          <h2 class="section__title page__title">Login</h2>
         </header>
 
-        <ul class="products__grid" data-category="offers"></ul>
-      </section>
+        <form class="form login__form">
+          <div class="form__item">
+            <label class="form__label" for="email">Email</label>
 
-      <section class="products wrapper">
-        <header class="products__header">
-          <h2 class="products__title section__subtitle">Most Sold</h2>
+            <p id="email-hint" class="form__hint">
+              Hint: The valid format is, i.e:
+              <span class="form__hint--example">khappazo@gmail.com</span>.
+            </p>
 
-          <a href="#" class="products__see-all">
-            <span>See products</span>
-            <i
-              aria-hidden="true"
-              class="see-all__icon fa-solid fa-arrow-right"
-            ></i>
-          </a>
-        </header>
+            <p id="email-error" class="form__inline-error" aria-live="off"></p>
 
-        <ul class="products__grid" data-category="most-sold"></ul>
-      </section>
+            <div class="form__input-container">
+              <input
+                id="email"
+                type="email"
+                name="email"
+                class="form__input"
+                autocomplete="email"
+                required
+                aria-describedby="email-error email-hint"
+              />
 
-      <section class="products wrapper">
-        <header class="products__header">
-          <h2 class="products__title section__subtitle">General</h2>
+              <div class="form__icon-container">
+                <span class="form__icon form__icon--valid">
+                  <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
+                </span>
+                <span class="form__icon form__icon--invalid">
+                  <i class="fa-solid fa-circle-xmark" aria-hidden="true"></i>
+                </span>
+              </div>
+            </div>
+          </div>
 
-          <a href="#" class="products__see-all">
-            <span>See products</span>
-            <i
-              aria-hidden="true"
-              class="see-all__icon fa-solid fa-arrow-right"
-            ></i>
-          </a>
-        </header>
+          <div class="form__item">
+            <label class="form__label" for="password">Password</label>
 
-        <ul class="products__grid" data-category="general"></ul>
+            <p id="email-hint" class="form__hint">
+              Hint: At least height (8) characters.
+            </p>
+
+            <p
+              id="password-error"
+              class="form__inline-error"
+              aria-live="off"
+            ></p>
+
+            <div class="form__input-container">
+              <input
+                id="password"
+                type="password"
+                name="password"
+                class="form__input"
+                required
+                minlength="8"
+                aria-describedby="password-error"
+              />
+
+              <div class="form__icon-container">
+                <span class="form__icon form__icon--valid">
+                  <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
+                </span>
+                <span class="form__icon form__icon--invalid">
+                  <i class="fa-solid fa-circle-xmark" aria-hidden="true"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <button class="form__button">Login</button>
+        </form>
       </section>
 
       <section id="contact" class="contact wrapper">
@@ -359,10 +271,10 @@
       </section>
     </main>
 
-    <footer class="footer wrapper">
+    <footer class="footer wrapper full-width">
       <a href="./index.html" class="logo-container grid-va-center">
         <img
-          src="./assets/aluraGeekLogo.png"
+          src="../../../assets/aluraGeekLogo.png"
           alt="Logo"
           width="120"
           height="40"
@@ -438,7 +350,6 @@
       </p>
     </footer>
 
-    <script type="module" src="./src/index.js"></script>
-    <script type="module" src="./src/helpers/form-validation.js"></script>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>

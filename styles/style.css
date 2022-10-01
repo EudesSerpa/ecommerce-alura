@@ -49,6 +49,7 @@
   /* Font */
   --font-primary: 'Montserrat', sans-serif;
 
+  --font-extra-large-size: 2.6em;
   --font-large-size: 2.2em;
   --font-medium-size: 1.8em;
   --font-size: 1.6em;
@@ -142,6 +143,17 @@ input {
 
 .section__subtitle {
   font-size: var(--font-size);
+}
+
+.page__title {
+  font-size: var(--font-extra-large-size);
+}
+
+.full-width {
+  color: var(--on-surface-variant);
+  background-color: var(--suface-variant);
+  box-shadow: 0 0 0 100vmax var(--suface-variant);
+  clip-path: inset(0 -100vmax);
 }
 
 /* Skip link */

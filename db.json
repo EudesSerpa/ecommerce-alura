@@ -1,0 +1,92 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "imageUrl": "https://picsum.photos/320/360.webp",
+      "name": "Producto XYZ",
+      "price": "333",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. At repellendus hic dolore deleniti veniam est, doloremque laborum natus minima vitae ut corporis incidunt, quas repellat.",
+      "category": "most-sold"
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://picsum.photos/320/360.webp",
+      "name": "Producto XYZ",
+      "price": "299",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. At repellendus hic dolore deleniti veniam est, doloremque laborum natus minima vitae ut corporis incidunt, quas repellat.",
+      "category": "most-sold"
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://picsum.photos/320/360.webp",
+      "name": "Producto XYZ",
+      "price": "555",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. At repellendus hic dolore deleniti veniam est, doloremque laborum natus minima vitae ut corporis incidunt, quas repellat.",
+      "category": "most-sold"
+    },
+    {
+      "id": 4,
+      "imageUrl": "https://picsum.photos/320/360.webp",
+      "name": "Producto XYZ",
+      "price": "199",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. At repellendus hic dolore deleniti veniam est, doloremque laborum natus minima vitae ut corporis incidunt, quas repellat.",
+      "category": "offers"
+    },
+    {
+      "id": 5,
+      "imageUrl": "https://picsum.photos/320/360.webp",
+      "name": "Producto XYZ",
+      "price": "150",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. At repellendus hic dolore deleniti veniam est, doloremque laborum natus minima vitae ut corporis incidunt, quas repellat.",
+      "category": "offers"
+    },
+    {
+      "id": 6,
+      "imageUrl": "https://picsum.photos/320/360.webp",
+      "name": "Producto XYZ",
+      "price": "300",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. At repellendus hic dolore deleniti veniam est, doloremque laborum natus minima vitae ut corporis incidunt, quas repellat.",
+      "category": "offers"
+    },
+    {
+      "id": 7,
+      "imageUrl": "https://picsum.photos/320/360.webp",
+      "name": "Producto XYZ",
+      "price": "555",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. At repellendus hic dolore deleniti veniam est, doloremque laborum natus minima vitae ut corporis incidunt, quas repellat.",
+      "category": "most-sold"
+    },
+    {
+      "id": 8,
+      "imageUrl": "https://picsum.photos/320/360.webp",
+      "name": "Producto XYZ",
+      "price": "199",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. At repellendus hic dolore deleniti veniam est, doloremque laborum natus minima vitae ut corporis incidunt, quas repellat.",
+      "category": "general"
+    },
+    {
+      "id": 9,
+      "imageUrl": "https://picsum.photos/320/360.webp",
+      "name": "Producto XYZ",
+      "price": "150",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. At repellendus hic dolore deleniti veniam est, doloremque laborum natus minima vitae ut corporis incidunt, quas repellat.",
+      "category": "general"
+    },
+    {
+      "id": 10,
+      "imageUrl": "https://picsum.photos/320/360.webp",
+      "name": "Producto XYZ",
+      "price": "300",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. At repellendus hic dolore deleniti veniam est, doloremque laborum natus minima vitae ut corporis incidunt, quas repellat.",
+      "category": "general"
+    },
+    {
+      "id": "3227360a-4857-4ec3-b266-613fb9a891bd",
+      "name": "Test Title",
+      "description": "Test Desc",
+      "category": "general",
+      "price": "999",
+      "imageUrl": "https://images.unsplash.com/photo-1585144860131-245d551c77f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=904&q=80"
+    }
+  ]
+}

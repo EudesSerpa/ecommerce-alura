@@ -1,4 +1,4 @@
-import { $ } from "../../utils/getElement.js";
+import { $ } from "../../helpers/getElement.js";
 
 const btnSearch = $(".btn-search--mobile");
 const formSearch = $(".search-form");

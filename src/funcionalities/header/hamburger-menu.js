@@ -1,4 +1,4 @@
-import { $ } from "../../utils/getElement.js";
+import { $ } from "../../helpers/getElement.js";
 
 const btnHamburger = $(".header__hamburger");
 const list = $(".header__nav-list");

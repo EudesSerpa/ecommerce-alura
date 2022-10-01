@@ -1,8 +1,4 @@
 import { toast } from "https://cdn.skypack.dev/wc-toast";
-import { $ } from "./utils/getElement.js";
-
-const form = $(".contact__form");
-const formInputs = document.querySelectorAll(".form__input");
 
 const states = {
   VALID: "valid",
@@ -22,6 +18,23 @@ const constraints = {
     errorMessages: {
       required: "Message field cannot be empty",
       minLength: "Message must be at least 10 characters long",
+    },
+  },
+  email: {
+    required: true,
+    regex:
+      /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/,
+    errorMessages: {
+      regex: "Email format invalid",
+      required: "Email field cannot be empty",
+    },
+  },
+  password: {
+    required: true,
+    minLength: 8,
+    errorMessages: {
+      required: "Password field cannot be empty",
+      minLength: "Password must be at least 8 characters long",
     },
   },
 };
@@ -71,7 +84,7 @@ const validateField = ({ name, value }) => {
   } else if (regex && !regex.test(value)) {
     error = errorMessages.regex;
   } else if (minLength && value.length < minLength) {
-    error = errorMessages.minLength;
+    error = `${errorMessages.minLength}. You have ${value.length} character(s)`;
   }
 
   if (error) {
@@ -98,10 +111,10 @@ const checkInput = ({ field }) => {
   return { error };
 };
 
-const validateForm = () => {
+const validateForm = (inputs) => {
   let isValid = true;
 
-  [...formInputs].forEach((input) => {
+  [...inputs].forEach((input) => {
     const { error } = checkInput({ field: input });
 
     if (error) isValid = false;
@@ -110,50 +123,57 @@ const validateForm = () => {
   return isValid;
 };
 
-form.addEventListener("focusout", (e) => {
-  if (e.target.tagName !== "INPUT" && e.target.tagName !== "TEXTAREA") return;
+export const validationForm = ({
+  formElement,
+  successMessage,
+  failMesssage = "Error: Form invalid!",
+}) => {
+  formElement.addEventListener("focusout", (e) => {
+    if (e.target.tagName !== "INPUT" && e.target.tagName !== "TEXTAREA") return;
 
-  const { error } = checkInput({ field: e.target });
-  const errorElement = document.getElementById(`${e.target.name}-error`);
+    const { error } = checkInput({ field: e.target });
+    const errorElement = document.getElementById(`${e.target.name}-error`);
 
-  if (error) {
-    renderInlineError({ errorElement, error });
-    return;
-  }
+    if (error) {
+      renderInlineError({ errorElement, error });
+      return;
+    }
 
-  clearInlineError({ errorElement });
-});
+    clearInlineError({ errorElement });
+  });
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+  formElement.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-  const isValid = validateForm();
+    const formInputs = formElement.querySelectorAll(".form__input");
+    const isValid = validateForm(formInputs);
 
-  if (!isValid) {
-    const firstErrorElement = document.querySelector("[aria-invalid=true]");
-    firstErrorElement.focus();
-    toast("Error: Form invalid!", {
+    if (!isValid) {
+      const firstErrorElement = formElement.querySelector(
+        "[aria-invalid=true]"
+      );
+      firstErrorElement?.focus();
+      toast(failMesssage, {
+        icon: {
+          type: "error",
+        },
+        duration: 3000,
+      });
+      return;
+    }
+
+    const formItems = formElement.querySelectorAll(".form__item");
+    formItems.forEach((node) => {
+      clearValidationStates({ node });
+    });
+
+    formElement.reset();
+
+    toast(successMessage, {
       icon: {
-        type: "error",
+        type: "success",
       },
       duration: 3000,
     });
-    return;
-  }
-
-  const formItems = document.querySelectorAll(".form__item");
-  formItems.forEach((node) => {
-    clearValidationStates({ node });
   });
-
-  form.reset();
-
-  console.log("Form sent successfully!");
-
-  toast("Message sent successfully!", {
-    icon: {
-      type: "success",
-    },
-    duration: 3000,
-  });
-});
+};

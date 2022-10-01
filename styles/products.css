@@ -32,6 +32,7 @@
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   place-items: center;
   gap: 1rem;
+  min-height: 400px;
 }
 
 .product {
@@ -75,7 +76,7 @@
   display: -webkit-box;
   max-width: 40ch;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 1;
   font-size: .9rem;
   text-overflow: ellipsis;
   overflow: hidden;

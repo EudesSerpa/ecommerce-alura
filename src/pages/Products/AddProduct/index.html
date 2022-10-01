@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="../../../../styles/style.css" />
+    <link rel="stylesheet" href="../../../../styles/header.css" />
+    <link rel="stylesheet" href="../../../../styles/products.css" />
+    <link rel="stylesheet" href="../../../../styles/contact.css" />
+    <link rel="stylesheet" href="../../../../styles/footer.css" />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>AluraGeek | Create Product</title>
+  </head>
+  <body>
+    <wc-toast></wc-toast>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+      <div class="header__content wrapper">
+        <a href="../../../../index.html" class="logo-container grid-va-center">
+          <img
+            src="../../../../assets/aluraGeekLogo.png"
+            alt="Logo"
+            width="120"
+            height="40"
+            class="header__logo logo"
+          />
+        </a>
+
+        <nav id="main-nav" class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__item">
+              <a
+                href="../../../../index.html"
+                class="header__link grid-va-center"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li class="header__item">
+              <a
+                href="../index.html"
+                class="header__link grid-va-center active-page"
+                >Products</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__menu">
+          <form id="search-form" class="search-form" role="search">
+            <input
+              type="search"
+              name="search"
+              id="search"
+              class="search-form__input"
+              placeholder="Enter your search"
+              aria-label="Search products"
+            />
+
+            <button
+              class="btn-search search-form__submit header__icon"
+              aria-label="Submit search"
+            >
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            </button>
+          </form>
+
+          <button
+            class="btn-search btn-search--mobile header__icon"
+            aria-label="Show search form"
+            aria-expanded="false"
+            aria-controls="search-form"
+          >
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          </button>
+
+          <button class="btn-cart header__icon" aria-label="Cart">
+            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+          </button>
+
+          <a href="#" class="header__link login-link">
+            <i class="fa-solid fa-user" aria-hidden="true"></i>
+            User
+          </a>
+
+          <button
+            class="header__hamburger"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="main-nav"
+          >
+            <span class="header__hamburger-line" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="wrapper">
+      <h1 class="section__title page__title">Create Product</h1>
+
+      <section class="create-product">
+        <form class="form contact__form">
+          <div class="form__item">
+            <label for="name">Name:</label>
+            <input id="name" name="name" class="form__input" required />
+          </div>
+
+          <div class="form__item">
+            <label for="description">Description:</label>
+            <textarea
+              name="description"
+              id="description"
+              class="form__input form__textarea"
+              cols="30"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form__item">
+            <label for="category">Category:</label>
+            <select name="category" id="category" class="form__input" required>
+              <option value="offers">Offers</option>
+              <option value="most-sold">Most Sold</option>
+              <option value="general">General</option>
+            </select>
+          </div>
+
+          <div class="form__item">
+            <label for="price">Price:</label>
+            <input
+              type="number"
+              name="price"
+              id="price"
+              class="form__input"
+              min="0"
+              max="9999"
+              value="1"
+            />
+          </div>
+
+          <div class="form__item">
+            <label for="image">Image URL:</label>
+            <input
+              type="url"
+              id="image"
+              name="imageUrl"
+              class="form__input"
+              required
+              autocomplete="image"
+            />
+          </div>
+
+          <button class="form__button">Create Product</button>
+        </form>
+
+        <article class="product-preview product">
+          <figure class="product-container">
+            <div class="product__image-container">
+              <img class="product__image" width="164" height="174" />
+            </div>
+
+            <figcaption class="product__description">
+              <h3 class="product__title">Name</h3>
+              <p class="product__text">Description</p>
+
+              <p class="product__price">$ 1</p>
+
+              <button class="product__cta">
+                <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                <span>Add to cart</span>
+              </button>
+            </figcaption>
+          </figure>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer wrapper">
+      <a href="./index.html" class="logo-container grid-va-center">
+        <img
+          src="../../../../assets/aluraGeekLogo.png"
+          alt="Logo"
+          width="120"
+          height="40"
+          class="logo"
+        />
+      </a>
+
+      <div class="footer__body">
+        <section class="footer__section footer__about-us">
+          <h4 class="footer__section-title">About us</h4>
+
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Fidelity program</a></li>
+            <li><a href="#" class="footer__link">Privacity politic</a></li>
+            <li><a href="#" class="footer__link">Terms and Conditions</a></li>
+          </ul>
+        </section>
+
+        <section class="footer__section footer__site-map">
+          <h4 class="footer__section-title">Site Map</h4>
+
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Home</a></li>
+            <li><a href="#" class="footer__link">Products</a></li>
+            <li><a href="#" class="footer__link">Contact</a></li>
+            <li><a href="#" class="footer__link">Login</a></li>
+          </ul>
+        </section>
+
+        <section class="footer__section footer__social-media">
+          <h4 class="footer__section-title">Follow us</h4>
+
+          <ul class="footer__list footer__social-media-list">
+            <li>
+              <a
+                href="#"
+                class="footer__link facebook"
+                aria-label="Facebook"
+                title="Facebook"
+              >
+                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="footer__link instagram"
+                aria-label="Instagram"
+                title="Instagram"
+              >
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="footer__link twitter"
+                aria-label="Twitter"
+                title="Twitter"
+              >
+                <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <p class="footer__author">
+        Made with
+        <i class="fas fa-heart heart" aria-label="love"></i>
+        and moving the hands by
+        <a href="#" class="footer__link author-name">Eudes&nbsp;Serpa</a>.
+      </p>
+    </footer>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>

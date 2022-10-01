@@ -1,0 +1,13 @@
+.products__add-product {
+  padding: .6rem .8rem;
+  font-weight: 500;
+  color: var(--on-primary);
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius);
+  transition: color .3s ease, background-color .3s ease;
+}
+
+.products__add-product:where(:hover, :active, :focus) {
+  color: var(--on-secondary);
+  background-color: var(--secondary-color);
+}

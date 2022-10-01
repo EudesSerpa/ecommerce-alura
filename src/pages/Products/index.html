@@ -12,13 +12,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/header.css" />
-    <link rel="stylesheet" href="./styles/carousel.css" />
-    <link rel="stylesheet" href="./styles/products.css" />
-    <link rel="stylesheet" href="./styles/contact.css" />
-    <link rel="stylesheet" href="./styles/footer.css" />
-    <title>AluraGeek</title>
+    <link rel="stylesheet" href="../../../styles/style.css" />
+    <link rel="stylesheet" href="../../../styles/header.css" />
+    <link rel="stylesheet" href="../../../styles/products.css" />
+    <link rel="stylesheet" href="../../../styles/contact.css" />
+    <link rel="stylesheet" href="../../../styles/footer.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>AluraGeek | Products</title>
   </head>
   <body>
     <wc-toast></wc-toast>
@@ -26,9 +26,9 @@
 
     <header class="header">
       <div class="header__content wrapper">
-        <a href="./index.html" class="logo-container grid-va-center">
+        <a href="../../../index.html" class="logo-container grid-va-center">
           <img
-            src="./assets/aluraGeekLogo.png"
+            src="../../../assets/aluraGeekLogo.png"
             alt="Logo"
             width="120"
             height="40"
@@ -40,16 +40,16 @@
           <ul class="header__nav-list">
             <li class="header__item">
               <a
-                href="./index.html"
-                class="header__link grid-va-center active-page"
+                href="../../../index.html"
+                class="header__link grid-va-center"
                 aria-current="page"
                 >Home</a
               >
             </li>
             <li class="header__item">
               <a
-                href="./src/pages/Products/index.html"
-                class="header__link grid-va-center"
+                href="./index.html"
+                class="header__link grid-va-center active-page"
                 >Products</a
               >
             </li>
@@ -112,170 +112,19 @@
     </header>
 
     <main id="main">
-      <section
-        class="hero carousel"
-        aria-label="Featured products"
-        aria-roledescription="carousel"
-        carousel-pagination="none"
-      >
-        <ul id="carousel__scroller" class="carousel__scroller">
-          <li class="carousel__slide">
-            <figure class="carousel__image-container">
-              <picture class="carousel__image-sources">
-                <source
-                  srcset="https://picsum.photos/1400/600.webp"
-                  media="(min-width: 1200px)"
-                />
-                <source
-                  srcset="https://picsum.photos/1000/500.webp"
-                  media="(min-width: 940px)"
-                />
-                <img
-                  class="carousel__image"
-                  src="https://picsum.photos/960/400.webp"
-                  alt="PS5 Blue Control"
-                  width="960"
-                  height="400"
-                />
-              </picture>
-
-              <figcaption class="carousel__image-description">
-                <h3 class="carousel__image-title">Product 1</h3>
-                <p class="carousel__image-text">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab,
-                  voluptatum? Eveniet nam delectus possimus consectetur,
-                  inventore repellendus vel mollitia esse quaerat vitae laborum
-                  itaque dicta ad aspernatur nisi tempore veniam.
-                </p>
-                <button class="carousel__image-cta">
-                  <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
-                  <span>Add to cart</span>
-                </button>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="carousel__slide">
-            <figure class="carousel__image-container">
-              <picture class="carousel__image-sources">
-                <source
-                  srcset="https://picsum.photos/1200/600.webp"
-                  media="(min-width: 1400px)"
-                />
-                <source
-                  srcset="https://picsum.photos/1000/500.webp"
-                  media="(min-width: 940px)"
-                />
-                <img
-                  class="carousel__image"
-                  src="https://picsum.photos/960/400.webp"
-                  alt="PS5 Blue Control"
-                  width="960"
-                  height="400"
-                />
-              </picture>
-
-              <figcaption class="carousel__image-description">
-                <h3 class="carousel__image-title">Product 2</h3>
-                <p class="carousel__image-text">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab,
-                  voluptatum? Eveniet nam delectus possimus consectetur,
-                  inventore repellendus vel mollitia esse quaerat vitae laborum
-                  itaque dicta ad aspernatur nisi tempore veniam.
-                </p>
-                <button class="carousel__image-cta">
-                  <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
-                  <span>Add to cart</span>
-                </button>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="carousel__slide">
-            <figure class="carousel__image-container">
-              <picture class="carousel__image-sources">
-                <source
-                  srcset="https://picsum.photos/1200/600.webp"
-                  media="(min-width: 1400px)"
-                />
-                <source
-                  srcset="https://picsum.photos/1000/500.webp"
-                  media="(min-width: 940px)"
-                />
-                <img
-                  class="carousel__image"
-                  src="https://picsum.photos/960/400.webp"
-                  alt="PS5 Blue Control"
-                  width="960"
-                  height="400"
-                />
-              </picture>
-
-              <figcaption class="carousel__image-description">
-                <h3 class="carousel__image-title">Product 3</h3>
-                <p class="carousel__image-text">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab,
-                  voluptatum? Eveniet nam delectus possimus consectetur,
-                  inventore repellendus vel mollitia esse quaerat vitae laborum
-                  itaque dicta ad aspernatur nisi tempore veniam.
-                </p>
-                <button class="carousel__image-cta">
-                  <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
-                  <span>Add to cart</span>
-                </button>
-              </figcaption>
-            </figure>
-          </li>
-        </ul>
-      </section>
-
       <section class="products wrapper">
         <header class="products__header">
-          <h2 class="products__title section__subtitle">Offers</h2>
+          <h2 class="products__title section__subtitle">ALl Products</h2>
 
-          <a href="#" class="products__see-all">
-            <span>See products</span>
-            <i
-              aria-hidden="true"
-              class="see-all__icon fa-solid fa-arrow-right"
-            ></i>
-          </a>
+          <a href="./AddProduct/index.html" class="products__add-product"
+            >Add product</a
+          >
         </header>
 
         <ul class="products__grid" data-category="offers"></ul>
       </section>
 
-      <section class="products wrapper">
-        <header class="products__header">
-          <h2 class="products__title section__subtitle">Most Sold</h2>
-
-          <a href="#" class="products__see-all">
-            <span>See products</span>
-            <i
-              aria-hidden="true"
-              class="see-all__icon fa-solid fa-arrow-right"
-            ></i>
-          </a>
-        </header>
-
-        <ul class="products__grid" data-category="most-sold"></ul>
-      </section>
-
-      <section class="products wrapper">
-        <header class="products__header">
-          <h2 class="products__title section__subtitle">General</h2>
-
-          <a href="#" class="products__see-all">
-            <span>See products</span>
-            <i
-              aria-hidden="true"
-              class="see-all__icon fa-solid fa-arrow-right"
-            ></i>
-          </a>
-        </header>
-
-        <ul class="products__grid" data-category="general"></ul>
-      </section>
-
-      <section id="contact" class="contact wrapper">
+      <section id="contact" class="contact wrapper full-width">
         <header class="contact__header">
           <h2 class="section__title">Contact us</h2>
         </header>
@@ -362,7 +211,7 @@
     <footer class="footer wrapper">
       <a href="./index.html" class="logo-container grid-va-center">
         <img
-          src="./assets/aluraGeekLogo.png"
+          src="../../../assets/aluraGeekLogo.png"
           alt="Logo"
           width="120"
           height="40"
@@ -438,7 +287,6 @@
       </p>
     </footer>
 
-    <script type="module" src="./src/index.js"></script>
-    <script type="module" src="./src/helpers/form-validation.js"></script>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
